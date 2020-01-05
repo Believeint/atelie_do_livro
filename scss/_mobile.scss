@@ -1,0 +1,24 @@
+// Widescreens
+@include mediaXl {
+  body {
+    background: white;
+  }
+}
+// Desktops & Notebooks
+@include mediaLg {
+  body {
+    background: black;
+  }
+}
+// Tablets & Notebooks pequenos
+@include mediaMd {
+  body {
+    background: green;
+  }
+}
+// Smartphones
+@include mediaSm {
+  body {
+    background: blue;
+  }
+}

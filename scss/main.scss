@@ -1,5 +1,10 @@
+@import "config";
+
 body {
   h1 {
-    color: red;
+    background: $cor_secundaria;
+    color: transicao_cor_texto($cor_secundaria);
   }
 }
+
+@import "mobile";

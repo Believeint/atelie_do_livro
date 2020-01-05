@@ -1,2 +1,19 @@
 body h1 {
-  color: red; }
+  background: #eece1a;
+  color: #000; }
+
+@media screen and (max-width: 1171px) {
+  body {
+    background: white; } }
+
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  body {
+    background: black; } }
+
+@media screen and (max-width: 768px) {
+  body {
+    background: green; } }
+
+@media screen and (max-width: 500px) {
+  body {
+    background: blue; } }
