@@ -1,9 +1,44 @@
 @import "config";
 
 body {
-  h1 {
-    background: $cor_secundaria;
-    color: transicao_cor_texto($cor_secundaria);
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.15rem;
+  background-color: $cor_primaria;
+  color: transicao_cor_texto($cor_primaria);
+
+  nav {
+    max-width: 940px;
+    min-width: 850px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double $cor_primaria;
+    background-color: whitesmoke;
+    border-radius: 10px;
+
+    h1 {
+      color: transicao_cor_texto($cor_primaria);
+    }
+    ul {
+      width: 780px;
+      padding: 15px;
+      margin: 0px auto 0px auto;
+      border-top: 2px solid #000;
+      border-bottom: 1px solid #000;
+      text-align: center;
+    }
+
+    img {
+      width: 150px;
+      height: 110px;
+      margin: 0 auto 20px auto;
+    }
+
+    p {
+      text-align: center;
+      width: 600px;
+      margin: 20px auto;
+      font-weight: normal;
+    }
   }
 }
 
