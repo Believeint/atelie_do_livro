@@ -85,6 +85,15 @@
     right: 0;
   }
 
+  #loader {
+    position: relative;
+    text-align: center;
+  }
+
+  #loader img {
+    width: 50px;
+  }
+
 
   .btn-common:hover, 
   .btn-common:focus{

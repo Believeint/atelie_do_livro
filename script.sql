@@ -31,15 +31,33 @@ CREATE TABLE IF NOT EXISTS `clientes`(
     `logradouro` VARCHAR(100) NOT NULL,
     `numero` VARCHAR(10) NOT NULL,
     `complemento` VARCHAR(100) NULL,
-    `bairro` VARCHAR(50) NOT NULL,
+    `bairro` VARCHAR(60) NOT NULL,
     `municipio` VARCHAR(50) NOT NULL,
-    `uf` VARCHAR(20) NOT NULL,
+    `uf` VARCHAR(30) NOT NULL,
     `cep` VARCHAR(20) NOT NULL,
     `pais` VARCHAR(30) NOT NULL,
     `fone` VARCHAR(20) NOT NULL,
     `email` VARCHAR(30) NOT NULL,
     PRIMARY KEY(`id`)
-) ENGINE=INNODB DEFAULT CHARSET=LATIN1 AUTO_INCREMENT=1;
+) ENGINE=INNODB DEFAULT CHARSET=LATIN1 AUTO_INCREMENT=3;
+
+CREATE TABLE IF NOT EXISTS `clientes_indireto`(
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+    `razao_social` VARCHAR(120) NOT NULL,
+    `cnpj` VARCHAR(20) NOT NULL,
+    `inscricao_estadual` VARCHAR(15) NOT NULL,
+    `logradouro` VARCHAR(100) NOT NULL,
+    `numero` VARCHAR(10) NOT NULL,
+    `complemento` VARCHAR(100) NULL,
+    `bairro` VARCHAR(60) NOT NULL,
+    `municipio` VARCHAR(50) NOT NULL,
+    `uf` VARCHAR(30) NOT NULL,
+    `cep` VARCHAR(20) NOT NULL,
+    `pais` VARCHAR(30) NOT NULL,
+    `fone` VARCHAR(20) NOT NULL,
+    `email` VARCHAR(50) NOT NULL,
+    PRIMARY KEY(`id`)
+) ENGINE=INNODB DEFAULT CHARSET=LATIN1 AUTO_INCREMENT=3;
 
 
 INSERT INTO `grupo`(`id`,`nome`,`permissao`) VALUES

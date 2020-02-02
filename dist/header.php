@@ -1,4 +1,4 @@
-<?php require_once 'Core/init.php'; ?>
+<?php require_once "Core/init.php"; ?>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/main2.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/ajax.js"></script>
 </head>
 <body>
+
     <header id="header">
        <div class="container">
            <div class="row">
@@ -50,8 +52,8 @@
                         <li class="dropdown">
                             <a href="#">Cadastro<i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="cad-cliente.php">Cliente</a></li>
-                                <li><a href="#">Cliente Secundário</a></li>
+                                <li><a href="cad_cliente_view.php">Cliente</a></li>
+                                <li><a href="cad_cliente_secundario_view.php">Cliente Indireto</a></li>
                                 <li><a href="#">Agenda</a></li>
                                 <li><a href="#">Em breve</a></li>
                                 <li><a href="#">Em Breve</a></li>
@@ -61,7 +63,7 @@
                         <li class="dropdown">
                             <a href="blog.php">Pesquisa<i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="#">Cliente</a></li>
+                                <li><a href="pes_cliente_view.php">Cliente</a></li>
                                 <li><a href="#">Cliente Secundário</a></li>
                                 <li><a href="#">Agenda</a></li>
                                 <li><a href="#">Em Breve</a></li>

@@ -26,7 +26,7 @@ class Validate
                 $item = escape($item);
 
                 if($rule === "obrigatorio" && empty($value)) {
-                    $this->addError("O campo {$item} é Obrigatório");
+                    $this->addError("O campo " . strtoupper($item) . " é Obrigatório");
                 } elseif (!empty($value)) {
                     switch ($rule) {
                         case 'min':
@@ -37,6 +37,13 @@ class Validate
                         case 'max':
                             if(strlen($value) > $rule_value) {
                                 $this->addError("{$item} só pode ter no máximo {$rule_value} caracteres");
+                            }
+                            break;
+                        case 'exato':
+                            if(strlen($value) < $rule_value) {
+                                $regraCPNJ = "00.000.000/0000-00";
+                                $rule_value = strlen(str_replace(array('.', '/', '-'),'',$regraCPNJ));
+                                $this->addError("{$item} deve ter exatamente {$rule_value} digitos");
                             }
                             break;
                         case 'combinam':

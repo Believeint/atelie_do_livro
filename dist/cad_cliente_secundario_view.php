@@ -9,12 +9,12 @@ if(Input::exists()) {
             ),
             'cnpj' => array(
                 'obrigatorio' => true,
-                'unico' => 'clientes',
+                'unico' => 'clientes_indireto',
                 'exato' => 18
             ),
             'inscricao_estadual' => array(
                 'obrigatorio' => true,
-                'unico' => 'clientes'
+                'unico' => 'clientes_indireto'
             ),
             'logradouro' => array(
                 'obrigatorio' => true
@@ -48,9 +48,9 @@ if(Input::exists()) {
             )));
 
         if($validate->passed()) {
-            $cliente = new Cliente();
+            $clienteIndireto = new ClienteIndireto();
             try {
-                $cliente->create(array(
+                $clienteIndireto->create(array(
                     'razao_social' => Input::get("razao_social"),
                     'cnpj' => Input::get("cnpj"),
                     'inscricao_estadual' => Input::get("inscricao_estadual"),
@@ -95,10 +95,10 @@ if(Input::exists()) {
 
 <div class="container">
 
-    <h1 class="text-center">Cadastrar Novo Cliente</h1>
+    <h1 class="text-center">Cadastrar Novo Cliente Indireto</h1>
     <hr/>
 
-    <form action="cad_cliente_view.php" method="post">
+    <form action="cad_cliente_secundario_view.php" method="post">
 
         <div class="form-group">
             <label for="razao_social">Nome/Razão Social</label>

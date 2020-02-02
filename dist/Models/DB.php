@@ -68,6 +68,39 @@ class DB {
         }
     }
 
+    public function simpleSearch($table, $field, $search) {
+        $sql = "SELECT * FROM {$table} WHERE {$field} LIKE ?";
+        $param = "%{$search}%";
+        $this->_query = $this->_pdo->prepare($sql);
+        $this->_query->bindValue(1, $param);
+        if($this->_query->execute()) {
+            $this->_results = $this->_query->fetchAll(PDO::FETCH_OBJ);
+            $this->_count = $this->_query->rowCount();
+        }
+    }
+
+    public function multiSearch($table, $fields = array(), $search) {
+      $sql = "SELECT * FROM clientes WHERE ";
+        $x = 1;
+      foreach ($fields as $field){
+          if($x < count($fields)){
+              $sql .= "{$field} LIKE '%{$search}%' OR ";
+          } else {
+              $sql .= "{$field} LIKE '%{$search}%'";
+          }
+        $x++;
+      }
+
+      if($this->_query = $this->_pdo->query($sql)) {
+          $this->_results = $this->_query->fetchAll(PDO::FETCH_OBJ);
+          $this->_count = $this->_query->rowCount();
+      }
+
+
+
+
+    }
+
     // Insere Dados no DB
     public function insert($table, $fields = array())
     {
@@ -84,6 +117,7 @@ class DB {
         }
 
         $sql = "INSERT INTO {$table} (`".implode('`, `', $keys)."`) VALUES ({$values})";
+
         if(!$this->query($sql, $fields)->error()) {
             return true;
         } else {

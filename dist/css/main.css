@@ -29,6 +29,8 @@ body {
       width: 600px;
       margin: 20px auto;
       font-weight: normal; }
+  body #result img {
+    width: 50px; }
 
 @media screen and (max-width: 1171px) {
   body {

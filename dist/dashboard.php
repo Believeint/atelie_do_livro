@@ -1,9 +1,13 @@
+<?php
 
-<?php include 'header.php';
+include 'header.php';
+
 
 if(Session::exists('home')) {
     echo "<div id='alert' class='alert-success text-center'>" . "<strong>" .  Session::flash('home') . "</strong>" . "</div>";
 }
+
+
 
 ?>
 <section id="home-slider">
