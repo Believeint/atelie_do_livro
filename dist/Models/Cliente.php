@@ -29,6 +29,14 @@ class Cliente extends Pessoa
         $this->_count = $this->_db->count();
     }
 
+    public function edit($id, $fields = array())
+    {
+        if($this->_db->update('clientes', $id))
+            return true;
+        else
+            return false;
+    }
+
 
     public function find($id)
     {

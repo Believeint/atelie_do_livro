@@ -31,6 +31,8 @@ class Validate
                     switch ($rule) {
                         case 'min':
                             if(strlen($value) < $rule_value) {
+                                $regraFone = "(00)00000-0000";
+                                $rule_value = strlen(str_replace(array('(',')','-'), '', $regraFone));
                                 $this->addError("{$item} precisa ter no mínimo {$rule_value} caracteres");
                             }
                             break;

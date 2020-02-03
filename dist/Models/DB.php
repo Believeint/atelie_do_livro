@@ -80,7 +80,7 @@ class DB {
     }
 
     public function multiSearch($table, $fields = array(), $search) {
-      $sql = "SELECT * FROM clientes WHERE ";
+      $sql = "SELECT * FROM {$table} WHERE ";
         $x = 1;
       foreach ($fields as $field){
           if($x < count($fields)){
@@ -139,7 +139,9 @@ class DB {
             $x++;
         }
 
+
         $sql = "UPDATE {$table} SET {$set} WHERE id = {$id}";
+
         if(!$this->query($sql, $fields)->error()) {
             return true;
         } else {

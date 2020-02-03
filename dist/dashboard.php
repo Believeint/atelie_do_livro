@@ -4,7 +4,7 @@ include 'header.php';
 
 
 if(Session::exists('home')) {
-    echo "<div id='alert' class='alert-success text-center'>" . "<strong>" .  Session::flash('home') . "</strong>" . "</div>";
+    echo "<div id='alert' class='alert-success text-center'><strong>" .  Session::flash('home') . "</strong></div>";
 }
 
 

@@ -52,9 +52,9 @@
                         <li class="dropdown">
                             <a href="#">Cadastro<i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="cad_cliente_view.php">Cliente</a></li>
-                                <li><a href="cad_cliente_secundario_view.php">Cliente Indireto</a></li>
-                                <li><a href="#">Agenda</a></li>
+                                <li><a href="cad_cliente_view.php">Cliente Direto</a></li>
+                                <li><a href="cad_cliente_indireto_view.php">Cliente Indireto</a></li>
+                                <li><a href="cad_agenda_view.php">Agenda</a></li>
                                 <li><a href="#">Em breve</a></li>
                                 <li><a href="#">Em Breve</a></li>
                                 <li><a href="#">Em Breve</a></li>
@@ -63,9 +63,9 @@
                         <li class="dropdown">
                             <a href="blog.php">Pesquisa<i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="pes_cliente_view.php">Cliente</a></li>
-                                <li><a href="#">Cliente Secundário</a></li>
-                                <li><a href="#">Agenda</a></li>
+                                <li><a href="pes_cliente_view.php">Cliente Direto</a></li>
+                                <li><a href="pes_cliente_indireto_view.php">Cliente Indireto</a></li>
+                                <li><a href="pes_agenda_view.php">Agenda</a></li>
                                 <li><a href="#">Em Breve</a></li>
                                 <li><a href="#">Em Breve</a></li>
                             </ul>

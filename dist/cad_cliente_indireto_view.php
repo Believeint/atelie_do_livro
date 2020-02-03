@@ -95,10 +95,10 @@ if(Input::exists()) {
 
 <div class="container">
 
-    <h1 class="text-center">Cadastrar Novo Cliente Indireto</h1>
+    <h2 class="text-center">Cadastrar Novo Cliente Indireto</h2>
     <hr/>
 
-    <form action="cad_cliente_secundario_view.php" method="post">
+    <form action="cad_cliente_indireto_view.php" method="post">
 
         <div class="form-group">
             <label for="razao_social">Nome/Razão Social</label>
@@ -252,7 +252,7 @@ if(Input::exists()) {
         </fieldset>
 
         <input type="hidden" name="token" value="<?php echo Token::generate();?>">
-        <button type="submit" class="btn btn-primary pull-right" style="margin-bottom: 10px;"><i class="fa fa-plus-square"></i> CADASTRAR</button>
+        <button type="submit" class="btn btn-success pull-right" style="margin-bottom: 10px;"><i class="fa fa-plus-square"></i> CADASTRAR</button>
 
     </form>
 </div>

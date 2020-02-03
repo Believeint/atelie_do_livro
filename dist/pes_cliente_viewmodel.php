@@ -19,7 +19,7 @@ switch ($_REQUEST['acao']) {
         break;
     case 'detalhar':
         $id = $_REQUEST['id'];
-        Redirect::to('det_cliente_view.php' . "?id=$id");
+        Redirect::to("det_cliente_view.php?id=$id");
         break;
     default:
         if(isset($_POST['query'])) {
@@ -91,7 +91,7 @@ switch ($_REQUEST['acao']) {
                                 <td>$resultado->inscricao_estadual</td>
                                 <td>$resultado->municipio</td>
                                 <td>$resultado->fone</td>
-                                <td><a title='Detalhar' onclick=\"location.href='pes_cliente_viewmodel.php?acao=detalhar&id=".$resultado->id."'\"><i class='fa fa-cogs'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a title='Excluir' onclick=\"if(confirm('Confirmar Exclusão?')) { location.href='pes_cliente_viewmodel.php?acao=excluir&id=".$resultado->id."' }\"><i class='fa fa-remove'></i></a></td>
+                                <td><a title='Detalhar' onclick=\"location.href='pes_cliente_viewmodel.php?acao=detalhar&id=".$resultado->id."'\"><i class='fa fa-cogs'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a title='Editar' onclick=\"location.href='edi_cliente_view.php?id=". $resultado->id ."'\"><i class='fa fa-edit'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a title='Excluir' onclick=\"if(confirm('Confirmar Exclusão?')) { location.href='pes_cliente_viewmodel.php?acao=excluir&id=".$resultado->id."' }\"><i class='fa fa-remove'></i></a></td>
                             </tr>";
             }
 

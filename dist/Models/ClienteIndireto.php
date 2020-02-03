@@ -27,7 +27,7 @@ class ClienteIndireto extends Cliente
 
     function find($id)
     {
-        $this->_data = $this->_db->get('clientes_indireto', array('id', '=', $id));
+        $this->_data = $this->_db->get('clientes_indireto', array('id', '=', $id))->first();
     }
 
     function remove($id)
